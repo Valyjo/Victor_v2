@@ -1,53 +1,53 @@
 # Victor_v2
 
-import pyowm
+    import pyowm
 
-from pyowm.utils import config
+    from pyowm.utils import config
+	
+    from pyowm.utils import timestamps
+	
 
-from pyowm.utils import timestamps
+    from colorama import init
+
+    from colorama import Fore, Back, Style
+
+    use Colorama to make Termcolor work on Windows too
+    init()
+
+    from subprocess import call
+
+	print (Back.MAGENTA)
+	print("Пароль:")
+	age = int(input())
+	if age == 1215:
+		print(Fore.BLACK)
+		print(Back.GREEN)
+		print("_______________Доступ открыт_______________\n_______________Добро пожаловать_______________")
+		post = 3
+
+ 	else:
+		print(Fore.BLACK)
+		print(Back.RED)
+		print("Доступ закрыт")
+		input("На ваш адрес уже вызвана оперативная группа ")
+		post = 0
+
+	if post > 1:
+		input("_______________Нажмите любую клавишу_______________")
 
 
-from colorama import init
+	else:
+		raise SystemExit(0)
 
-from colorama import Fore, Back, Style
+	import os
+	print(Back.CYAN)
+	print(Fore.WHITE)
 
-# use Colorama to make Termcolor work on Windows too
-init()
+	text = 0
 
-from subprocess import call
-
-print (Back.MAGENTA)
-print("Пароль:")
-age = int(input())
-if age == 1215:
-	print(Fore.BLACK)
-	print(Back.GREEN)
-	print("_______________Доступ открыт_______________\n_______________Добро пожаловать_______________")
-	post = 3
-
-else:
-	print(Fore.BLACK)
-	print(Back.RED)
-	print("Доступ закрыт")
-	input("На ваш адрес уже вызвана оперативная группа ")
-	post = 0
-
-if post > 1:
-	input("_______________Нажмите любую клавишу_______________")
-
-
-else:
-	raise SystemExit(0)
-
-import os
-print(Back.CYAN)
-print(Fore.WHITE)
-
-text = 0
-
-while (text < 10):
-	print("______________Чего желаетe?_______________")
-	text1  = input("1-video, 2-music, 3-exit, 4-other options:")
+	while (text < 10):
+		print("______________Чего желаетe?_______________")
+		text1  = input("1-video, 2-music, 3-exit, 4-other options:")
 	if text1 == "4":
 		break
 	if text1 == "1":
@@ -60,11 +60,11 @@ while (text < 10):
 
 	elif text1 == "4":
 		test3 = 1
-text3 = 0
-while text3 < 10:
-	print(Back.CYAN)
-	print(Fore.WHITE)
-	text2 = input("1-chat, 2-music_N_2, 3-exit, 4-weather:")
+	text3 = 0
+	while text3 < 10:
+		print(Back.CYAN)
+		print(Fore.WHITE)
+		text2 = input("1-chat, 2-music_N_2, 3-exit, 4-weather:")
 	
 	if text2 == "1":
 		print(Back.RED)
